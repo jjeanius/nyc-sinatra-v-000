@@ -8,7 +8,7 @@
         <br> </br>
         <h3><label> Landmark: </label> </h3>
         <%= @landmark.name %>
-          <% @figures.name.landmarks.each do |landmark|%>
+          <% @figures.landmarks.each do |landmark|%>
             <h3> <%= landmark.name %></h3>
             <% end %>
       </form>
