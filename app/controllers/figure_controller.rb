@@ -24,7 +24,7 @@ get '/figures/new' do
     erb :'figures/show'
   end
 
-  post '/figures' do
+  post '/figures/:id' do
     @figure = Figure.create(params[:figure])
       if !params[:title].empty?
         @figure.titles << Title.create(params[:title])
@@ -33,7 +33,7 @@ get '/figures/new' do
         @figure.landmarks << Landmark.create(params[:landmark])
         end
       @figure.save
-    redirect "/figures/"
+    redirect "/figures"
   end
 
   patch '/figures/:id' do
