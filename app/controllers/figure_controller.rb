@@ -33,12 +33,15 @@ get '/figures/new' do
         @figure.landmarks << Landmark.create(params[:landmark])
         end
       @figure.save
+      binding.pry
     redirect "/figures"
   end
 
   patch '/figures/:id' do
+
     @figure = Figure.find(params[:id])
     @figure.update(params[:figure])
+
     @figure.save
     redirect "/figures/#{@figure.id}"
   end
