@@ -11,3 +11,4 @@ end
 run ApplicationController
 use FiguresController
 use LandmarksController
+use Rack::MethodOverride
