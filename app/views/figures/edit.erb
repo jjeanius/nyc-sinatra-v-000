@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <h1> Update Figure </h1>
+    <h1> Updating Figure </h1>
       <form action="/figures/<%=@figure.id%>" method="post">
         <input id="hidden" type="hidden" name="_method" value="patch">
         <br> <br>
@@ -20,7 +20,7 @@
         <input type="text" name="title[name]" id="new_title"></input>
         <br> </br>
 
-        <label>Updating landmark:</label>
+        <label><h1>Updating landmark:</label></h1>
           <label> landmark Name: </label>
           <%@landmarks.each do|landmark|%>
             <li><input type="checkbox" name="figure[landmark_ids][]" id="landmark_<%=landmark.id%>" value="<%=landmark.id%>"> <%=landmark.name%></input></li>
