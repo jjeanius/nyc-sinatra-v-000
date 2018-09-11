@@ -24,7 +24,7 @@ get '/figures/new' do
     erb :'figures/show'
   end
 
-  post '/figures/:id' do
+  post '/figures' do
     @figure = Figure.create(params[:figure])
       if !params[:title].empty?
         @figure.titles << Title.create(params[:title])
