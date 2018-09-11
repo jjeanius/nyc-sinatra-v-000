@@ -38,7 +38,7 @@ get '/figures/new' do
   end
 
   patch '/figures/:id' do
-    
+
     @figure = Figure.find(params[:id])
     binding.pry
     @figure.update(params[:figure])
