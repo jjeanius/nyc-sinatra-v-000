@@ -34,7 +34,7 @@ get '/figures/new' do
         end
       @figure.save
     #  binding.pry
-    redirect "/figures"
+    redirect "/figures/"
   end
 
   patch '/figures/:id' do
