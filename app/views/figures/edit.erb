@@ -7,12 +7,13 @@
         <br> <br>
         <label> Updating Figure Name: </label>
           <input type="text" name="figure[name]" id="figure[title_ids]" value="<%=@figure.name%>">
-      <h1> Updating title:</h1>
-        <label> Title Name: </label>
-          <%@titles.each do|title|%>
-            <li> <input type="checkbox" name="figure[title_ids][]" id="title_<%=title.id%>" value="<%=title.name%>"><%=title.name%></input> </li>
-          <%end%>
-      <br> </br>
+
+        <h1> Updating title:</h1>
+          <label> Title Name: </label>
+            <%@titles.each do|title|%>
+              <li> <input type="checkbox" name="figure[title_ids][]" id="title_<%=title.id%>" value="<%=title.name%>"><%=title.name%></input> </li>
+            <%end%>
+              <br> </br>
 
       <label> Create a new title:</label>
         <input type="text" name="title[name]" id="new_title"></input>
