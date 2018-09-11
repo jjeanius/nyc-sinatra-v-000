@@ -7,7 +7,6 @@
         <h3><label> Figure Name: </label> </h3> <%=@figure.name%> </a>
         <br> </br>
         <h3> <label> Title: </label></h3>
-          <li> <%= @title.name %></li>
           <% @figure.titles.each do |title|%>
           <%=title.name%>
           <% end %>
